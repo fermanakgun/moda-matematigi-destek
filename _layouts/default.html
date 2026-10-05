@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% seo %}
+<link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+<script>
+/* Dil: #tr/#en > kayıtlı tercih > tarayıcı dili. JS yoksa iki dil de görünür. */
+(function(){var d=document.documentElement,l=null;try{var h=location.hash.replace('#','');if(h==='tr'||h==='en')l=h;else{l=localStorage.getItem('mm-lang')}}catch(e){}
+if(l!=='tr'&&l!=='en')l=((navigator.language||'en').toLowerCase().indexOf('tr')===0)?'tr':'en';
+d.setAttribute('data-lang',l);d.lang=l})();
+</script>
+</head>
+<body>
+<header class="bar" id="top"><div class="bar-in">
+<a class="brand" href="{{ '/' | relative_url }}"><img src="https://fermanakgun.github.io/proje-tanitim/assets/moda-matematigi.png" alt="" width="32" height="32"><span>Moda Matematiği <span class="mut">/ Diamond Wardrobe</span> <span class="mut">· <span data-sec="tr">Destek</span><span data-sec="en">Support</span></span></span></a>
+<div class="menu" id="mm-menu"><a class="menu-link" href="https://fermanakgun.github.io/proje-tanitim/"><span data-sec="tr">Tüm projeler</span><span data-sec="en">All projects</span><span class="sep"> / All projects</span></a></div>
+<span class="lang" role="group" aria-label="Dil / Language"><a href="#tr" data-set-lang="tr" hreflang="tr" lang="tr" aria-label="Türkçe">TR</a><a href="#en" data-set-lang="en" hreflang="en" lang="en" aria-label="English">EN</a></span>
+</div></header>
+<main class="wrap">
+{{ content }}
+</main>
+<footer class="foot"><div class="wrap">
+<div class="others" id="mm-others"><p class="others-t"><span data-sec="tr">Diğer uygulamalar</span><span data-sec="en">Other apps</span><span class="sep">Diğer uygulamalar / Other apps</span></p>
+<ul id="mm-others-list">
+<li><a href="https://fermanakgun.github.io/proje-tanitim/moda-matematigi/">Moda Matematiği — tanıtım sayfası / product page</a></li>
+<li><a href="https://fermanakgun.github.io/proje-tanitim/">Tüm projeler / All projects</a></li>
+</ul></div>
+<p class="copy">&copy; 2026 Ferman Akgün</p>
+</div></footer>
+<script src="https://fermanakgun.github.io/proje-tanitim/assets/projects.js"></script>
+<script src="{{ '/assets/site.js' | relative_url }}"></script>
+</body>
+</html>
